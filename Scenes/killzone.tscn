@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://d06g5ofods3pu"]
+
+[ext_resource type="Script" path="res://_Scripts/killzone.gd" id="1_7f4wq"]
+
+[node name="Killzone" type="Area2D"]
+editor_description = "https://www.youtube.com/watch?v=LOhfqjmasi0 @36:23
+Using a killzone as a generic scene with an Area2D that kills the player allows us to use it for not only when the player falls to their death, but also hits spikes or other hazards. 
+
+Therefore we put the collision mask on layer 2 to only interact with the player. Then within the scene that uses the killzone, we can add it to the scene and add a collision shape to that local node rather than inside the scene."
+collision_mask = 2
+script = ExtResource("1_7f4wq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
