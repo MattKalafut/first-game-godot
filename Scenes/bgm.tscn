@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqamr3vdc5cte"]
+
+[ext_resource type="AudioStream" uid="uid://cdcp61l8n5tgs" path="res://Assets/Audio/Music/time_for_adventure.mp3" id="1_xydt0"]
+
+[node name="BGM" type="AudioStreamPlayer2D"]
+editor_description = "By making the BGM into its own scene, we can autoload it in Project -> Project Settings -> Global/AutoLoad so that it loads on its own regardless of being in the scene or not. That way it won't reset on death."
+stream = ExtResource("1_xydt0")
+autoplay = true
+bus = &"BGM"

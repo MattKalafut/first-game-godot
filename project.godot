@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Game.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Bgm="*res://Scenes/bgm.tscn"
+
 [dotnet]
 
 project/assembly_name="First-Game"
