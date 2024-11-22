@@ -64,12 +64,12 @@ position = Vector2(0, -7)
 target_position = Vector2(11, 0)
 
 [node name="RaycastBottomRight" type="RayCast2D" parent="."]
-position = Vector2(0, -2)
-target_position = Vector2(11, 2)
+position = Vector2(7, -1)
+target_position = Vector2(0, 6)
 
 [node name="RaycastBottomLeft" type="RayCast2D" parent="."]
-position = Vector2(0, -2)
-target_position = Vector2(-11, 2)
+position = Vector2(-7, -1)
+target_position = Vector2(0, 6)
 
 [node name="RaycastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
