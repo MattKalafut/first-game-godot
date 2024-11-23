@@ -308,7 +308,7 @@ tile_map_data = PackedByteArray("AADw/wQAAAAAAA4AAADw/wUAAAAAAA8AAADx/wQAAAAAAA4
 tile_set = SubResource("TileSet_qbewd")
 
 [node name="Player" parent="." instance=ExtResource("2_nf88w")]
-position = Vector2(-9, -2)
+position = Vector2(-7, -1)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -5)
@@ -402,22 +402,22 @@ position = Vector2(631, 21)
 position = Vector2(711, -11)
 
 [node name="Coin22" parent="Coins" instance=ExtResource("5_3goxb")]
-position = Vector2(838, -73)
+position = Vector2(838, -71)
 
 [node name="Coin23" parent="Coins" instance=ExtResource("5_3goxb")]
-position = Vector2(857, -82)
+position = Vector2(856, -77)
 
 [node name="Coin24" parent="Coins" instance=ExtResource("5_3goxb")]
 position = Vector2(875, -70)
 
 [node name="Coin25" parent="Coins" instance=ExtResource("5_3goxb")]
-position = Vector2(892, -82)
+position = Vector2(893, -77)
 
 [node name="Coin26" parent="Coins" instance=ExtResource("5_3goxb")]
-position = Vector2(909, -71)
+position = Vector2(909, -69)
 
 [node name="Coin27" parent="Coins" instance=ExtResource("5_3goxb")]
-position = Vector2(925, -83)
+position = Vector2(923, -78)
 
 [node name="Coin28" parent="Coins" instance=ExtResource("5_3goxb")]
 position = Vector2(938, -71)
