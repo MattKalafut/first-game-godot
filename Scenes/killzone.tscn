@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d06g5ofods3pu"]
+[gd_scene load_steps=3 format=3 uid="uid://d06g5ofods3pu"]
 
 [ext_resource type="Script" path="res://_Scripts/killzone.gd" id="1_7f4wq"]
+[ext_resource type="AudioStream" uid="uid://jsd2s6id372t" path="res://Assets/Audio/SFX/hurt.wav" id="2_jcww7"]
 
 [node name="Killzone" type="Area2D"]
 editor_description = "https://www.youtube.com/watch?v=LOhfqjmasi0 @36:23
@@ -13,6 +14,9 @@ script = ExtResource("1_7f4wq")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.6
 one_shot = true
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_jcww7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

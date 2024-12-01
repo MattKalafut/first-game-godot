@@ -7,9 +7,12 @@ extends Area2D;
 # if we wanted to grab something from a different scene it would look like
 # $Player/Camera or anything that follows the tree hierarchy of Game -> Player -> Camera or Game -> Killzone -> Timer
 @onready var timer = $Timer;
+@onready var death_sound = $DeathSound
+
 
 #Player enters the killzone, prints a "You died!" message, followed by the timer being started
 func _on_body_entered(body):
+	death_sound.play();
 	print("You died!");
 	Engine.time_scale = 0.5; # Slows the game at half speed
 	body.get_node("CollisionShape2D").queue_free(); # Remove the CollisionShape2D node so the player can fall through the world.

@@ -5,6 +5,12 @@ const SPEED = 130.0;
 const JUMP_VELOCITY = -300.0;
 
 @onready var animated_sprite = $AnimatedSprite2D;
+@onready var jump_sound = $JumpSound
+@onready var respawn_sound = $RespawnSound
+@onready var game_manager = %GameManager;
+
+func _ready():
+	respawn_sound.play();
 
 # _physics_process() runs 60 times per second by default, independent of game framerate
 func _physics_process(delta):
@@ -14,6 +20,7 @@ func _physics_process(delta):
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		jump_sound.play();
 		velocity.y = JUMP_VELOCITY;
 
 	# Get the input direction. -1, 0, 1
